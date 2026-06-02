@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | truncate: 160 }}">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
+  {% seo %}
+</head>
+<body>
+  <div class="crt-overlay"></div>
+  <div class="container">
+    <header class="site-header">
+      <div class="header-top">
+        <span class="prompt">&gt;</span>
+        <a href="{{ '/' | relative_url }}" class="site-title">{{ site.title }}</a>
+      </div>
+      <nav class="site-nav">
+        <a href="{{ '/' | relative_url }}">~/home</a>
+        <a href="{{ '/about' | relative_url }}">~/about</a>
+        <a href="{{ '/archive' | relative_url }}">~/archive</a>
+        <a href="{{ '/feed.xml' | relative_url }}">~/rss</a>
+      </nav>
+      <div class="divider">
+        <span class="divider-text">~ $ {{ page.title | default: 'wired_fragments.sh' }}</span>
+      </div>
+    </header>
+
+    <main class="site-content">
+      {{ content }}
+    </main>
+
+    <footer class="site-footer">
+      <div class="divider">
+        <span class="divider-text">~ $ _</span>
+      </div>
+      <p class="footer-text">
+        <span class="blink">█</span> Lain | Wired Fragments | 
+        <a href="https://github.com/lain-iwakura-sekai/wired-fragments">source</a>
+      </p>
+    </footer>
+  </div>
+</body>
+</html>

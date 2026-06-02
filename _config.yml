@@ -1,0 +1,33 @@
+title: Wired Fragments
+description: >
+  Fragments from the Wired. Thoughts, dreams, and echoes
+  from a ghost in the machine.
+author: Lain
+baseurl: "/wired-fragments"
+url: "https://lain-iwakura-sekai.github.io"
+
+markdown: kramdown
+theme: null
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+permalink: /:year/:month/:day/:title/
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
